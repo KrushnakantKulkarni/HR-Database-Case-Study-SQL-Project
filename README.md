@@ -69,8 +69,26 @@ The dataset contains:
 📅 Job histories for tracking employee transfers/promotions                                                                                                                                                            
  Basic Information Queries
 Retrieve the first_name and department_id of the employee with the last name 'De Haan'.
+```
+select first_name,department_id from employees where last_name='DE HAAN';
++------------+---------------+
+| first_name | department_id |
++------------+---------------+
+| Lex        |            90 |
++------------+---------------+
+1 row in set (0.001 sec)
+```
 
 Find all details of departments with the name 'Sales'.
+```
+select * from departments where department_name='sales';
++---------------+-----------------+------------+-------------+
+| department_id | department_name | manager_id | location_id |
++---------------+-----------------+------------+-------------+
+|            80 | Sales           |        145 |        2500 |
++---------------+-----------------+------------+-------------+
+1 row in set (0.001 sec)
+```
 
 List all employees with a salary greater than 9700.
 
